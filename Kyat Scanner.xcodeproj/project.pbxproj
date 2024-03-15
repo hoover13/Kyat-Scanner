@@ -11,6 +11,9 @@
 		161DF2622BA415F600B5E73D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161DF2612BA415F600B5E73D /* ContentView.swift */; };
 		161DF2642BA415F800B5E73D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 161DF2632BA415F800B5E73D /* Assets.xcassets */; };
 		161DF2672BA415F800B5E73D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 161DF2662BA415F800B5E73D /* Preview Assets.xcassets */; };
+		161DF26E2BA4174200B5E73D /* AugmentedReality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161DF26D2BA4174200B5E73D /* AugmentedReality.swift */; };
+		161DF2762BA42FD000B5E73D /* 1000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 161DF2742BA42FD000B5E73D /* 1000.mp3 */; };
+		161DF2772BA42FD000B5E73D /* 5000.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 161DF2752BA42FD000B5E73D /* 5000.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		161DF2612BA415F600B5E73D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		161DF2632BA415F800B5E73D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		161DF2662BA415F800B5E73D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		161DF26D2BA4174200B5E73D /* AugmentedReality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedReality.swift; sourceTree = "<group>"; };
+		161DF2742BA42FD000B5E73D /* 1000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1000.mp3; sourceTree = "<group>"; };
+		161DF2752BA42FD000B5E73D /* 5000.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 5000.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,8 @@
 			children = (
 				161DF25F2BA415F600B5E73D /* Kyat_ScannerApp.swift */,
 				161DF2612BA415F600B5E73D /* ContentView.swift */,
+				161DF26D2BA4174200B5E73D /* AugmentedReality.swift */,
+				161DF26F2BA4211000B5E73D /* Sounds */,
 				161DF2632BA415F800B5E73D /* Assets.xcassets */,
 				161DF2652BA415F800B5E73D /* Preview Content */,
 			);
@@ -65,6 +73,15 @@
 				161DF2662BA415F800B5E73D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		161DF26F2BA4211000B5E73D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				161DF2742BA42FD000B5E73D /* 1000.mp3 */,
+				161DF2752BA42FD000B5E73D /* 5000.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +142,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				161DF2762BA42FD000B5E73D /* 1000.mp3 in Resources */,
 				161DF2672BA415F800B5E73D /* Preview Assets.xcassets in Resources */,
 				161DF2642BA415F800B5E73D /* Assets.xcassets in Resources */,
+				161DF2772BA42FD000B5E73D /* 5000.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				161DF2622BA415F600B5E73D /* ContentView.swift in Sources */,
+				161DF26E2BA4174200B5E73D /* AugmentedReality.swift in Sources */,
 				161DF2602BA415F600B5E73D /* Kyat_ScannerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,11 +295,13 @@
 				DEVELOPMENT_TEAM = MGX4V5XP6T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Enable camera access to scan the bill";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +326,13 @@
 				DEVELOPMENT_TEAM = MGX4V5XP6T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Enable camera access to scan the bill";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

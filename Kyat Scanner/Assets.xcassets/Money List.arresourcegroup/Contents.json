@@ -1,0 +1,20 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "resources" : [
+    {
+      "filename" : "1000 Kyat Back.arreferenceimage"
+    },
+    {
+      "filename" : "1000 Kyat Front.arreferenceimage"
+    },
+    {
+      "filename" : "5000 Kyat Back.arreferenceimage"
+    },
+    {
+      "filename" : "5000 Kyat Front.arreferenceimage"
+    }
+  ]
+}
