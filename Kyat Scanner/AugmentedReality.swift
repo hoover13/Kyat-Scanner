@@ -26,6 +26,7 @@ struct ARViewContainer: UIViewControllerRepresentable {
 class ARViewController: UIViewController, ARSCNViewDelegate {
     var audioPlayer: AVAudioPlayer?
     var sceneView: ARSCNView!
+    var imageDetected = false
     
     override func loadView() {
         sceneView = ARSCNView(frame: .zero)
@@ -62,49 +63,53 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         if let imageAnchor = anchor as? ARImageAnchor {
             
             if imageAnchor.referenceImage.name == "1000 Kyat Front" || imageAnchor.referenceImage.name == "1000 Kyat Back" {
-                readBill(billSound: "1000")
-                print("5000 detected")
+                if !imageDetected {
+                    readBill(billSound: "1000")
+                    print("1000 detected")
+                    imageDetected = true // Set the flag to true
+                }
             }
             
             if imageAnchor.referenceImage.name == "5000 Kyat Front" || imageAnchor.referenceImage.name == "5000 Kyat Back" {
-                readBill(billSound: "5000")
-                print("5000 detected")
+                if !imageDetected {
+                    readBill(billSound: "5000")
+                    print("5000 detected")
+                    imageDetected = true
+                }
             }
+            
+            return node
         }
         
-        return node
-    }
+        func readBill(billSound: String) {
+            if let soundURL = Bundle.main.url(forResource: billSound, withExtension: "mp3") {
+                do {
+                    audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+                    audioPlayer?.play()
+                } catch {
+                    print("Error playing sound: \(error.localizedDescription)")
+                }
+            }
+        }
     
-    func readBill(billSound: String) {
-        if let soundURL = Bundle.main.url(forResource: billSound, withExtension: "mp3") {
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
-                audioPlayer?.play()
-            } catch {
-                print("Error playing sound: \(error.localizedDescription)")
+    
+    enum Bill {
+        case oneThousand, fiveThousand
+        
+        var billSound: String {
+            switch self {
+            case .oneThousand:
+                "1000"
+            case .fiveThousand:
+                "5000"
             }
         }
     }
-}
-
-enum Bill {
     
-    case oneThousand, fiveThousand
-    
-    var billSound: String {
-        switch self {
-        case .oneThousand:
-            "1000"
-        case .fiveThousand:
-            "5000"
+    struct AugmentedRealityView: View {
+        var body: some View {
+            ARViewContainer()
         }
     }
-}
-
-struct AugmentedRealityView: View {
-    var body: some View {
-        ARViewContainer()
-    }
-}
-
-
+    
+    
