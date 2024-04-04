@@ -7,13 +7,13 @@ Introducing Kyat Scanner, the world's first accessibility iOS app for visually i
 
 Key Features :
 Real-Time Recognition
--Instantly recognizes and reads the value of Myanmar banknotes when scanned with the device camera.
+  - Instantly recognizes and reads the value of Myanmar banknotes when scanned with the device camera.
 Reliable Accuracy
--Accurate identification of currency denominations.
+ - Accurate identification of currency denominations.
 Offline Functionality
--It can be used without internet access.
+ - It can be used without internet access.
 Compatible with iOS 14 and later
--The app supports accessibility for users with older iPhones.
+ - The app supports accessibility for users with older iPhones.
 
 Available on App Store 
 https://apps.apple.com/am/app/kyat-scanner/id6479621772
