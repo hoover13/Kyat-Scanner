@@ -24,3 +24,6 @@ Offline Functionality
 Compatible with iOS 14 and later
 
 -The app supports accessibility for users with older iPhones.
+
+# Demo
+https://github.com/hoover13/Kyat-Scanner/assets/64706595/5bee8837-4576-4ced-87cd-a65b0b3d03df
